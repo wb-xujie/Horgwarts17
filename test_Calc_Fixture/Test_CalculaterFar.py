@@ -7,15 +7,15 @@ class TestCalculater:
     # @pytest.mark.test
     # 这是一个标签
     # 加法测试用例
-    def test_add(self,Initialize,get_data_add):
+    def test_add(self,Initialize,get_data_add,):
         print("这是加法测试用例")
         print("{0}+{1}={2}".format(get_data_add[0],get_data_add[1],get_data_add[2]))
         assert get_data_add[2] == round(Initialize.add(get_data_add[0],get_data_add[1]),8)
 
-
     # @pytest.mark.dev
     # 这是一个标签
     # 除法测试用例
+
     def test_div(self,Initialize,get_data_div):
         print("这是除法测试用例")
         print("{0}/{1}={2}".format(get_data_div[0], get_data_div[1], get_data_div[2]))
@@ -36,4 +36,3 @@ class TestCalculater:
         print("这是减法测试用例")
         print("{0}-{1}={2}".format(get_data_sub[0],get_data_sub[1],get_data_sub[2]))
         assert get_data_sub[2] == round(Initialize.sub(get_data_sub[0],get_data_sub[1]),8)
-
