@@ -42,7 +42,7 @@ class TestCalculater:
     @pytest.mark.parametrize("a,b,answer",data_add)
     # 加法测试用例
     def test_add(self,a,b,answer):
-        assert answer == self.calc.add(a,b)
+        assert answer == round(self.calc.add(a,b),8)
         print("这是加法测试用例")
     # @pytest.mark.dev
     # 这是一个标签
@@ -53,16 +53,16 @@ class TestCalculater:
         if b == 0:
             assert(self.calc.div(a,b)==None)
         else:
-            assert answer == self.calc.div(a,b)
+            assert answer == round(self.calc.div(a,b),8)
 
     # 乘法测试用例
     @pytest.mark.parametrize("a,b,answer", data_mul)
     def test_mul(self,a,b,answer):
         print("这是乘法测试用例")
-        assert answer == self.calc.mul(a,b)
+        assert answer == round(self.calc.mul(a,b),8)
 
     # 减法测试用例
     @pytest.mark.parametrize("a,b,answer", data_sub)
     def test_sub(self,a,b,answer):
         print("这是减法测试用例")
-        assert answer == self.calc.sub(a,b)
+        assert answer == round(self.calc.sub(a,b),8)
